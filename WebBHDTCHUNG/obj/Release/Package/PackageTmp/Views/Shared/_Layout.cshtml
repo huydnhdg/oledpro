@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/plugins/dataTables/css/dataTables.bootstrap.css" rel="stylesheet" />
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+</head>
+<body>
+
+    <div style="background: #c9ccc9">
+        <div class="banner_nav_CK">
+            <nav class="navbar navbar-default" style="background: #ffffff; padding-left: 54px; padding-right: 22px;border-radius:unset">
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h1>
+                        <a class="navbar-brand" href="~/">
+                            <img src="~/Image/logo-oledpro.png" class="img-responsive logo_style" />
+                        </a>
+                    </h1>
+
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="navbar-collapse navbar-right collapse" id="bs-example-navbar-collapse-1" style="height: 80px;">
+                    <nav style="padding-top: 15px; padding-bottom: 69px;">
+                        <ul class="nav navbar-nav">
+                            <li><a href="~/" class="hvr-underline-from-center">Trang Chủ / Home</a></li>
+                            <li><a target="_blank" href="http://oledpro.vn/" class="hvr-underline-from-center scroll">Thông Tin / Contact</a></li>
+                            @if (!User.Identity.IsAuthenticated)
+                            {
+                                <li><a href="/account/login" class="hvr-underline-from-center scroll">Đăng Nhập / Sign in</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="/thong-tin-dai-ly" class="hvr-underline-from-center scroll">@User.Identity.Name</a></li>
+                            }
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </nav>
+
+            <div class="clearfix">
+            </div>
+            <img src="~/Image/slide-oledpro1.jpg" class="img-responsive" />
+        </div>
+
+        <div class="banner_nav_CK " style="min-height: 88vh; background: #7e8484; background: url(/Image/background.jpg) no-repeat 0px 0px; background-size: cover;">
+
+            @RenderBody()
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <p>©@DateTime.Now.Year <a style="color: #333;" href="http://baohanh.oledpro.vn">http://baohanh.oledpro.vn</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Content/plugins/dataTables/js/jquery.dataTables.js"></script>
+    <script src="~/Content/plugins/dataTables/js/dataTables.bootstrap.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

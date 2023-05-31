@@ -1,0 +1,208 @@
+2020-07-09 16:52:49.0028 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-09 16:52:49.0478 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-09 17:05:16.2198 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-09 17:05:16.2198 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-09 17:05:59.6913 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-09 17:05:59.6913 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-09 17:10:40.5941 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-09 17:10:40.5941 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-09 17:18:46.5083 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-09 17:18:46.5083 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-09 17:18:50.5750 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-09 17:18:50.5750 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-09 17:18:59.7760 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-09 17:18:59.7760 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-09 17:19:51.5737 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-09 17:19:51.5737 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-09 17:22:15.7888 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-09 17:22:15.7888 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-09 17:23:41.5418 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-09 17:23:41.5418 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 10:06:14.4463 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:06:14.4863 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 10:19:48.7194 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:19:48.7904 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 10:21:05.5932 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:21:05.6292 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 10:22:03.9707 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:22:04.0066 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 10:24:41.9087 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:24:41.9437 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 10:25:55.5825 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:25:55.6195 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 10:26:56.7184 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:26:56.7534 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 10:28:05.5560 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:28:05.5890 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 10:34:31.9558 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:34:31.9928 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 10:35:20.8083 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:35:20.8493 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 10:36:55.8596 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:36:55.8996 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 10:44:21.9499 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:44:21.9909 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 10:46:43.4890 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:46:43.5250 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 10:49:12.9293 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:49:12.9633 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 10:58:44.4323 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 10:58:44.4673 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 11:00:42.6836 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 11:00:42.7206 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 11:14:57.3863 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 11:14:57.3863 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 11:20:44.6080 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 11:20:44.6430 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 11:21:01.1418 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 11:21:01.1418 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-10 11:52:39.7530 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 11:52:39.7890 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 11:52:45.9886 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 11:52:45.9886 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-10 13:36:51.7431 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 13:36:51.7941 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-10 13:37:03.9334 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 13:37:03.9334 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-10 15:05:35.3039 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 15:05:35.3669 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 15:16:22.1011 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 15:16:22.1371 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 15:22:57.2123 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 15:22:57.2472 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 15:28:04.5171 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 15:28:04.5530 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 15:35:05.5871 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 15:35:05.6251 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 15:38:00.1740 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 15:38:00.2100 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-10 15:51:31.1990 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 15:51:31.2450 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-10 16:23:21.0145 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-10 16:23:21.0485 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-13 08:12:29.4419 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-13 08:12:29.5159 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-13 08:13:17.5594 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-13 08:13:17.5594 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-13 16:38:22.0614 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-13 16:38:22.1443 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-14 10:37:30.7309 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 10:37:30.7928 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-14 10:50:55.1073 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 10:50:55.1433 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-14 10:52:40.9246 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 10:52:40.9656 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-14 11:00:11.3322 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 11:00:11.3681 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-14 11:00:53.2911 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 11:00:53.3260 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-14 11:52:45.4122 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 11:52:45.4512 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-14 11:54:58.5827 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 11:54:58.6217 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-14 11:56:19.7341 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 11:56:19.7751 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-14 14:22:52.8831 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 14:22:52.9431 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-14 14:24:11.6085 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 14:24:11.6505 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-14 14:33:15.1303 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 14:33:15.1693 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-14 14:46:55.9961 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 14:46:56.0651 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-14 14:49:53.6043 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 14:49:53.6433 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-14 14:50:39.4620 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 14:50:39.4989 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-14 14:51:55.1318 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 14:51:55.1757 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-14 15:16:01.3136 WebBHDTCHUNG.Controllers.WarrantiController 111 Thai 84965433459 Bà R?a - Vung Tàu Bà R?a   
+2020-07-14 15:16:02.3740 WebBHDTCHUNG.Controllers.WarrantiController warranti ok
+2020-07-14 16:11:02.2622 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 16:11:02.3002 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-14 16:12:30.4685 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 16:12:30.5055 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-14 16:22:53.9038 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 16:22:53.9398 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-14 16:27:10.5823 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 16:27:10.6173 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-14 16:42:57.4199 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-14 16:42:57.4559 WebBHDTCHUNG.Controllers.HomeController 8b872a17-1966-4f1d-a293-84ee7a181a51
+2020-07-15 09:15:42.3029 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 09:15:42.3829 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-15 09:22:36.3570 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 09:22:36.3929 WebBHDTCHUNG.Controllers.HomeController 8b872a17-1966-4f1d-a293-84ee7a181a51
+2020-07-15 11:21:47.7271 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 11:21:47.7871 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-15 11:23:29.6132 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 11:23:29.6502 WebBHDTCHUNG.Controllers.HomeController c424bf35-f2cf-40c9-9b15-c490c00a23d9
+2020-07-15 16:08:02.3943 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 16:08:02.4753 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-15 16:18:22.0900 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 16:18:22.1600 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-15 16:50:46.9700 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 16:50:47.0290 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-15 16:51:24.2791 WebBHDTCHUNG.Controllers.ActiveController 112 Thai 84965433459 Bà R?a - Vung Tàu Bà R?a   
+2020-07-15 16:51:45.4890 WebBHDTCHUNG.Controllers.ActiveController active ok
+2020-07-15 16:57:08.4772 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 16:57:08.5132 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-15 16:57:20.0136 WebBHDTCHUNG.Controllers.ActiveController 113 Thai 84965433459 Bà R?a - Vung Tàu Bà R?a   
+2020-07-15 16:57:20.9151 WebBHDTCHUNG.Controllers.ActiveController active ok
+2020-07-15 17:23:05.4343 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 17:23:05.5092 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-15 17:23:20.5626 WebBHDTCHUNG.Controllers.ActiveController 121 Thai 84965433459 Bà R?a - Vung Tàu Bà R?a   
+2020-07-15 17:24:12.4398 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 17:24:12.4818 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-15 17:24:25.0056 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 17:24:25.0056 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-15 17:24:37.7492 WebBHDTCHUNG.Controllers.ActiveController 121 Thai 84965433459 Bà R?a - Vung Tàu Bà R?a   
+2020-07-15 17:27:42.9829 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 17:27:43.0198 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-15 17:28:07.2159 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 17:28:07.2159 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-15 17:28:43.3646 WebBHDTCHUNG.Controllers.ActiveController 121 Thai 84965433459 Bà R?a - Vung Tàu Bà R?a   
+2020-07-15 17:29:25.9681 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 17:29:26.0031 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-15 17:29:56.5486 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 17:29:56.5486 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-15 17:30:17.9403 WebBHDTCHUNG.Controllers.ActiveController 121 Thai 84965433459 Bà R?a - Vung Tàu Bà R?a   
+2020-07-15 17:32:12.2386 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 17:32:12.2736 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-15 17:32:24.4386 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-15 17:32:24.4386 WebBHDTCHUNG.Controllers.HomeController d0c00509-0048-4b87-99a9-5e92e6d941a0
+2020-07-15 17:32:40.2426 WebBHDTCHUNG.Controllers.ActiveController 121 Thai 84965433459 Bà R?a - Vung Tàu Bà R?a   
+2020-07-16 10:47:48.0603 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-16 10:47:48.1253 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-16 10:51:22.4829 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-16 10:51:22.5178 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-16 10:52:35.4948 WebBHDTCHUNG.ReceviceMo.ApiReceviceController bhdt 84965433459 1 1 bhdt kh 115
+2020-07-16 15:21:06.9929 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-16 15:21:07.0589 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-16 15:24:28.0552 WebBHDTCHUNG.ReceviceMo.ApiReceviceController bhdt 84965433459 1 1 bhdt kh 115 0965433459
+2020-07-16 15:25:08.7478 WebBHDTCHUNG.ReceviceMo.ApiReceviceController San pham MLN0 serial 115 da kich hoat thanh cong tu ngay 16/07/2020 den ngay 16/07/2021. Cam on QK
+2020-07-16 15:38:40.6061 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-16 15:38:40.6441 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-16 15:39:56.3556 WebBHDTCHUNG.ReceviceMo.ApiReceviceController bhdt 0965433459 1 1 bhdt kh 115 test
+2020-07-16 15:50:34.4026 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-16 15:50:34.4356 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-16 15:51:24.6527 WebBHDTCHUNG.ReceviceMo.ApiReceviceController bhdt 0965433459 1 1 bhdt kh 115 test
+2020-07-16 15:57:16.2658 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-16 15:57:16.2978 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-16 15:57:47.2064 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-16 15:57:47.2064 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-17 11:16:25.0750 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-17 11:16:25.1600 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-17 11:18:28.8150 WebBHDTCHUNG.ReceviceMo.ApiReceviceController BHDT 0965433459 1 1 BHDT TEKA TC 115
+2020-07-17 11:19:05.9217 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-17 11:19:05.9547 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-17 11:19:24.1003 WebBHDTCHUNG.ReceviceMo.ApiReceviceController BHDT 0965433459 1 1 BHDT TEKA TC 115
+2020-07-17 11:21:12.4611 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-17 11:21:12.4960 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-17 11:21:30.6976 WebBHDTCHUNG.ReceviceMo.ApiReceviceController BHDT 0965433459 1 1 BHDT TEKA TC 115
+2020-07-17 11:22:21.8882 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-17 11:22:21.9212 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-17 11:22:31.8075 WebBHDTCHUNG.ReceviceMo.ApiReceviceController BHDT 0965433459 1 1 BHDT TEKA TC 115
+2020-07-17 11:22:45.6746 WebBHDTCHUNG.ReceviceMo.ApiReceviceController Tin nhan khong dung cu phap
+2020-07-17 11:23:59.9619 WebBHDTCHUNG.Controllers.HomeController ::1
+2020-07-17 11:24:00.0099 WebBHDTCHUNG.Controllers.HomeController 
+2020-07-17 11:24:17.5358 WebBHDTCHUNG.ReceviceMo.ApiReceviceController BHDT 0965433459 1 1 BHDT BS TC 115

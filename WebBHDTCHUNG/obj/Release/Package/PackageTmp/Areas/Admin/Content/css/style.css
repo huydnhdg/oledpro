@@ -1,0 +1,11 @@
+﻿input,
+select,
+textarea {
+    max-width: 280px;
+}
+.dl-horizontal dt {
+    white-space: normal;
+}
+.btn-right  {
+    text-align: right;
+}

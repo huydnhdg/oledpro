@@ -1,0 +1,500 @@
+﻿
+@{
+    ViewBag.Title = "Kích hoạt";
+    List<BHDT_OledPro.Models.Province> lprovince = (List<BHDT_OledPro.Models.Province>)TempData["province"];
+}
+<style>
+
+
+    #playground-container {
+        height: 500px;
+        overflow: hidden !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .main {
+        top: 0;
+    }
+
+    h1.title {
+        font-size: 50px;
+        font-family: Arial;
+        font-weight: 400;
+    }
+
+    hr {
+        width: 10%;
+        color: #fff;
+    }
+
+    .form-group {
+        margin-bottom: 5px;
+    }
+
+
+
+    input,
+    input::-webkit-input-placeholder {
+        font-size: 11px;
+        padding-top: 3px;
+    }
+
+    .main-login {
+        background-color: #fff;
+        /* shadows and rounded borders */
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-control {
+        height: auto !important;
+        padding: 8px 12px !important;
+    }
+
+    .input-group {
+        -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21) !important;
+        -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21) !important;
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21) !important;
+    }
+
+    #button {
+        border: 1px solid #ccc;
+        margin-top: 28px;
+        padding: 6px 12px;
+        color: #666;
+        text-shadow: 0 1px #fff;
+        cursor: pointer;
+        -moz-border-radius: 3px 3px;
+        -webkit-border-radius: 3px 3px;
+        border-radius: 3px 3px;
+        -moz-box-shadow: 0 1px #fff inset, 0 1px #ddd;
+        -webkit-box-shadow: 0 1px #fff inset, 0 1px #ddd;
+        box-shadow: 0 1px #fff inset, 0 1px #ddd;
+        background: #f5f5f5;
+        background: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #eeeeee));
+        background: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+        background: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+        background: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+        background: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
+    }
+
+    .main-center {
+        margin-top: 30px;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 10px 40px;
+        background: #ededed;
+        color: #1b1919;
+        text-shadow: none;
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+    }
+
+    span.input-group-addon i {
+        color: #009edf;
+        font-size: 17px;
+    }
+
+    .login-button {
+        margin-top: 5px;
+    }
+
+    .HeightCBB {
+        height: 38px !important;
+    }
+
+    .login-register {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .submit {
+        height: 38px;
+        width: 48%;
+        float: initial;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+@section scripts{
+    <script>
+        function GetCustomer() {
+            var phone = $("#phone").val();
+            $.ajax({
+                url: '/Active/GetCustomer',
+                type: 'POST',
+                datatype: 'application/json',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    phone: phone
+                }),
+                success: function (result) {
+                    var ob = $.parseJSON(result);
+                    if (ob.Name.length > 3) {
+                        $("#name").val(ob.Name);
+                        $("#address").val(ob.Address);
+                        $('#province').append(new Option(ob.City, ob.City, true, true));
+                        $("#installation_agent_address").val(ob.InstallationAgentAddress);
+                        $("#car_brandname").val(ob.CarBrandname);
+                    }
+                },
+                error: function () {
+                    /*$("#name").val("");
+                    $("#address").val("");                    
+                    $('#province').append(new Option("Nhập Tỉnh thành", "", true, true));
+                    $("#installation_agent_address").val("");
+                    $("#car_brandname").val("");*/
+                },
+            });
+        }
+        function GetProduct() {
+            var serial = $("#serial").val();
+            $.ajax({
+                url: '/Active/GetProduct',
+                type: 'POST',
+                datatype: 'application/json',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    serial: serial
+                }),
+                success: function (result) {
+                    if (result.length > 2) {
+                        $("#prodname").val(result);
+                    } else {
+                        $("#prodname").val("");
+                        alert("sản phẩm không tồn tại.");
+                    }
+                },
+                error: function () {
+                    alert("Da co loi xay ra. Lien he hotline...")
+                },
+            });
+        }
+        /*function GetCity() {
+            $("#district").html("");
+            $("#district").append
+                ($('<option></option>').val("").html("Nhập Quận huyện"))
+            var name = $("#province").val();
+            $.ajax
+                ({
+                    url: '/Active/GetCity',
+                    type: 'POST',
+                    datatype: 'application/json',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        name: name
+                    }),
+                    success: function (result) {
+                        $.each($.parseJSON(result), function (i, city) {
+                            $("#district").append
+                                ($('<option></option>').val(city).html(city))
+                        })
+                    },
+                    error: function () {
+                        alert("Hệ thống xảy ra lỗi.")
+                    },
+                });
+        }*/
+        var find = {
+            init: function () {
+                find.registerEvent();
+            },
+            registerEvent: function () {
+                $('#send').off('click').on('click', function () {
+                    $("#txt-info").css("display", "none");
+                    $("#tbl-result").css("display", "none");
+
+                    var serial = $('#serial').val();
+                    var prodname = $('#prodname').val();
+                    var product_code = $('#product_code').val();
+                    var name = $('#name').val();                    
+                    var province = $('#province').val();
+                    var address = $('#address').val();                    
+                    var phone = $('#phone').val();
+                    var installation_agent_address = $('#installation_agent_address').val();
+                    var car_brandname = $('#car_brandname').val();
+
+                    if (serial.length < 2) {
+                        $("#txt-info").css("display", "block");
+                        $("#txt-info").text("Số serial không đúng.");
+                    }
+                    else if (name.length == 0 || phone.length < 8 || province.length == 0 ||
+                            installation_agent_address.length == 0 || car_brandname.length == 0) {
+                        $("#txt-info").css("display", "block");
+                        $("#txt-info").text("Các trường thông tin chưa đúng");
+                    }
+                    else {
+                        $.ajax({
+                            url: '/Active/Send',
+                            type: 'POST',
+                            dataType: 'json',
+                            data: {
+                                serial: serial,
+                                prodname: prodname,
+                                product_code: product_code,
+                                name: name,                                
+                                province: province,                                
+                                address: address,
+                                phone: phone,                                                                
+                                installation_agent_address: installation_agent_address,
+                                car_brandname: car_brandname
+                            },
+                            success: function (ress) {
+                                var ob = $.parseJSON(ress);
+                                $("#txt-info").css("display", "block");
+                                $("#txt-info").text(ob.message);
+
+                                if (ob.prodActive != null) {
+                                    $("#tbl-result").css("display", "block");
+                                    $("#mname").text(ob.prodActive.Name);
+                                    $("#mserial").text(ob.prodActive.Serial);
+                                    $("#mmodel").text(ob.prodActive.Model);
+                                    $("#mproductcode").text(ob.prodActive.ProductCode);
+                                    $("#mtrade").text(ob.prodActive.MadeIn);
+                                    $("#mlimited").text(ob.prodActive.Limited + " tháng");
+                                    $("#mactive").text(dateFormat(new Date(parseInt((ob.prodActive.Activedate).match(/\d+/)[0]))));
+                                    $("#mend").text(dateFormat(addMonth(new Date(parseInt((ob.prodActive.Activedate).match(/\d+/)[0])), ob.prodActive.Limited)));
+                                }
+
+                                find.resetForm();
+                            }
+                        });
+                    }
+                });
+            },
+            resetForm: function () {
+                $('#serial').val("");
+                $('#prodname').val("");
+                $('#product_code').val("");
+                $('#name').val("");                
+                $('#province').val("");
+                $('#address').val(""); 
+                $('#phone').val("");
+                $('#installation_agent_address').val("");
+                $('#car_brandname').val("");
+            }
+        }
+        find.init();
+        function dateFormat(d) {
+            console.log(d);
+            return ((d.getDate()) + "").padStart(2, "0")
+                + "/" + (d.getMonth() + 1 + "").padStart(2, "0")
+                + "/" + d.getFullYear();
+        }
+        function addMonth(dt, n) {
+            return new Date(dt.setMonth(dt.getMonth() + n));
+        }
+    </script>
+}
+<div class="row main">
+    <div class="main-login main-center">
+        <h5 style="font-size: 16px;">Đăng ký kích hoạt bảo hành / Warranty Activation Registration</h5>
+        <br />
+        <div class="row">
+            <form>
+                <div class="row">
+                    <div class="col-lg-12" style="font-size:13px;">
+                        <div class="form-group col-lg-6">
+                            <label for="name" class="cols-sm-2 control-label">Mã cào  <span style="color: red">(*)</span> </label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-barcode" aria-hidden="true"></i></span>
+                                    <input onblur="GetProduct(this)" name="serial" type="text" id="serial" class="form-control" required placeholder="Nhập mã cào" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-6">
+                            <label for="name" class="cols-sm-2 control-label">Tên sản phẩm / Product Name  </label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-cube" aria-hidden="true"></i></span>
+                                    <input name="prodname" type="text" id="prodname" class="form-control" required placeholder="Nhập tên sản phẩm" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-6">
+                            <label for="product_code" class="cols-sm-2 control-label">Mã sản phẩm <span style="color: red"></span> </label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
+                                    <select name="product_code" id="product_code" class="form-control HeightCBB" required placeholder="Nhập tỉnh thành">
+                                        <option value="">Chọn mã sản phẩm</option>
+                                        <option value="OledPro X4">OledPro X4</option>
+                                        <option value="OledPro X5">OledPro X5</option>
+                                        <option value="OledPro X4s">OledPro X4s</option>
+                                        <option value="OledPro X5s">OledPro X5s</option>
+                                        <option value="OledPro X6s">OledPro X6s</option>
+                                        <option value="OledPro X8">OledPro X8</option>
+                                        <option value="OledPro X8s">OledPro X8s</option>
+                                        <option value="OledPro X9">OledPro X9</option>
+                                        <option value="OledPro X22">OledPro X22</option>
+                                        <option value="OledPro A5">OledPro A5</option>
+                                        <option value="OledPro A1S">OledPro A1S</option>
+                                        <option value="OledPro A6S">OledPro A6S</option>
+                                        <option value="OledPro A3">OledPro A1S</option>
+                                        <option value="OledPro X4 Premium">OledPro X4 Premium</option>
+                                        <option value="OledPro X4S Premium">OledPro X4S Premium</option>
+                                        <option value="OledPro X5 Premium">OledPro X5 Premium</option>
+                                        <option value="OledPro X5S Premium">OledPro X5S Premium</option>
+                                        <option value="OledPro X8 Premium">OledPro X8 Premium</option>
+                                        <option value="OledPro X8S Premium">OledPro X8S Premium</option>
+                                        <option value="OledPro Ultra 2K Ram3">OledPro Ultra 2K Ram3</option>
+                                        <option value="OledPro Ultra 2K Ram4">OledPro Ultra 2K Ram4</option>
+                                        <option value="OledPro Ultra 2K Ram6">OledPro Ultra 2K Ram6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-6">
+                            <label for="name" class="cols-sm-2 control-label">Họ tên / Full Name  <span style="color: red">(*)</span> </label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                    <input name="name" type="text" id="name" required class="form-control" placeholder="Nhập họ tên" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-6">
+                            <label for="province" class="cols-sm-2 control-label">Tỉnh thành / Province  <span style="color: red">(*)</span> </label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
+                                    <select name="province" id="province" class="form-control HeightCBB" required placeholder="Nhập tỉnh thành">
+                                        <option value="">Nhập Tỉnh thành</option>
+                                        @foreach (var item in lprovince)
+                                        {
+                                            <option value="@item.Name">@item.Name</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-6">
+                            <label for="address" class="cols-sm-2 control-label">Địa chỉ / Address</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
+                                    <input name="address" type="text" id="address" class="form-control" placeholder="Nhập địa chỉ" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-6">
+                            <label for="email" class="cols-sm-2 control-label">Số điện thoại / Phone Number  <span style="color: red">(*)</span> </label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+                                    <input pattern="[1-9]" onblur="GetCustomer(this)" name="phone" type="number" id="phone" class="form-control" required placeholder="Nhập số điện thoại" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-6">
+                            <label for="installation_agent_address" class="cols-sm-2 control-label">Địa chỉ Đại lý lắp đặt <span style="color: red">(*)</span></label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-cogs" aria-hidden="true"></i></span>
+                                    <input name="installation_agent_address" type="text" id="installation_agent_address" required class="form-control" placeholder="Nhập địa chỉ đại lý lắp đặt" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-6">
+                            <label for="car_brandname" class="cols-sm-2 control-label">Hãng xe/Đời xe <span style="color: red">(*)</span></label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-car fa" aria-hidden="true"></i></span>
+                                    <input name="car_brandname" type="text" id="car_brandname" required class="form-control" placeholder="Nhập hãng xe/đời xe" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-12 text-center">
+                    <input type="button" name="send" value="Kích Hoạt Bảo Hành" id="send" class="btn btn-success submit" />
+                </div>
+
+                <div class="form-group col-lg-12">
+
+                    <p id="txt-info" class="w3-animate-left alert alert-danger" style="display:none;"></p>
+
+                    <table id="tbl-result" class="w3-animate-left alert alert-success" style="display:none;">
+                        <tr>
+                            <td>
+                                Tên sản phẩm:
+                            </td>
+                            <td id="mname">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Mã cào:
+                            </td>
+                            <td id="mserial">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Model:
+                            </td>
+                            <td id="mmodel">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Mã sản phẩm:
+                            </td>
+                            <td id="mproductcode">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Thương hiệu:
+                            </td>
+                            <td id="mtrade">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Ngày kích hoạt:
+                            </td>
+                            <td id="mactive">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Hạn bảo hành:
+                            </td>
+                            <td id="mlimited">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Ngày hết hạn:
+                            </td>
+                            <td id="mend">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>

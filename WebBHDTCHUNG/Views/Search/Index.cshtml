@@ -1,0 +1,155 @@
+﻿
+@{
+    ViewBag.Title = "Tra cứu";
+}
+<style>
+    
+</style>
+<div class="row main">
+    <div class="main-login main-center">
+        <h5 style="    font-size: 16px;">Thông Tin Bảo Hành / Warranty Status</h5>
+        <br />
+        <div>
+            <form>
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Số điện thoại</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-barcode" aria-hidden="true"></i></span>
+                            <input name="phone" type="text" id="phone" class="form-control" placeholder="Nhập số điện thoại" required />
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="form-group ">
+                    <input type="button" name="send" value="Xác nhận / Submit" id="send" class="btn btn-success" style="width:100%;" />
+                </div>
+
+                <p id="txt-info" class="w3-animate-left alert alert-danger" style="display:none;"></p>
+
+            </form>
+        </div>
+        <hr />
+        <div style="clear:both">
+
+        </div>
+    </div>
+
+    <div class="main-login main-center" id="contentTable">
+
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var find = {
+            init: function () {
+                find.registerEvent();
+            },
+            registerEvent: function () {
+                $('#send').off('click').on('click', function () {
+                    $("#txt-info").css("display", "none");
+                    $("#tbl-result").css("display", "none");
+
+                    var phoneString = $('#phone').val();
+                    if (phoneString.length == 0) {
+                        $("#txt-info").css("display", "block");
+                        $("#txt-info").text("Bạn chưa nhập số điện thoại.");
+                    }
+                    else if (phoneString.length < 10 || phoneString.length > 12 || isNaN(phoneString)) {
+                        $("#txt-info").css("display", "block");
+                        $("#txt-info").text("Số điện thoại đã nhập không đúng định dạng.");
+                    }
+                    else {
+                        $.ajax({
+                            url: '/Search/GetProduct',
+                            type: 'POST',
+                            dataType: 'json',
+                            data: {
+                                phoneString: phoneString
+                            },
+                            success: function (ress) {                                
+                                var ob = $.parseJSON(ress);
+                                $("#txt-info").css("display", "block");
+                                $("#txt-info").text(ob.message);
+
+                                if (ob.prodActive != null) {
+                                    var html = "";
+                                    //console.log(ob.prodActive);
+                                    for (var i = 0; i < ob.prodActive.length; i++) {
+                                        var productCode = ob.prodActive[i].ProductCode;
+                                        if (productCode == null) {
+                                            productCode = '';
+                                        }
+
+                                        var customerName = ob.prodActive[i].CustomerName;
+                                        if (customerName == null) {
+                                            customerName = '';
+                                        }
+
+                                        var customerProvince = ob.prodActive[i].CustomerProvince;
+                                        if (customerProvince == null) {
+                                            customerProvince = '';
+                                        }
+
+                                        var customerAddress = ob.prodActive[i].CustomerAddress;
+                                        if (customerAddress == null) {
+                                            customerAddress = '';
+                                        }
+
+                                        var car_Brandname = ob.prodActive[i].Car_Brandname;
+                                        if (car_Brandname == null) {
+                                            car_Brandname = '';
+                                        }
+
+                                        var agentAddress = ob.prodActive[i].AgentAddress;
+                                        if (agentAddress == null) {
+                                            agentAddress = '';
+                                        }
+
+                                        var table = '<table id="tbl-result" class="w3-animate-left alert alert-success">' +
+                                                '<tr><td>Tên sản phẩm:</td><td style="font-weight: bold;">' + ob.prodActive[i].Name + '</td></tr >' + 
+                                                '<tr><td>Số Serial:</td><td style="font-weight: bold;">' + ob.prodActive[i].Serial + '</td></tr >' +
+                                            '<tr><td>Model:</td><td style="font-weight: bold;">' + ob.prodActive[i].Model + '</td></tr >' +
+                                            '<tr><td>Mã sản phẩm:</td><td style="font-weight: bold;">' + productCode + '</td></tr >' +
+                                                '<tr><td>Ngày kích hoạt:</td><td style="font-weight: bold;">' + dateFormat(new Date(parseInt((ob.prodActive[i].Activedate).match(/\d+/)[0]))) + '</td></tr >' +
+                                                '<tr><td>Hạn bảo hành:</td><td style="font-weight: bold;">' + ob.prodActive[i].Limited + '</td></tr >' +
+                                                '<tr><td>Ngày hết hạn:</td><td style="font-weight: bold;">' + dateFormat(addMonth(new Date(parseInt((ob.prodActive[i].Activedate).match(/\d+/)[0])), ob.prodActive[i].Limited)) + '</td></tr >' +
+                                            '<tr><td>Tên khách hàng:</td><td style="font-weight: bold;">' + customerName + '</td></tr >' +
+                                            '<tr><td>Tỉnh thành:</td><td style="font-weight: bold;">' + customerProvince + '</td></tr >' +
+                                                '<tr><td>Địa chỉ:</td><td style="font-weight: bold;">' + customerAddress + '</td></tr >' +                                                
+                                                '<tr><td>Số điện thoại:</td><td style="font-weight: bold;">' + ob.prodActive[i].CustomerPhone.replaceAt(ob.prodActive[i].CustomerPhone.length - 3, "***") + '</td></tr >' +
+                                            '<tr><td>Dòng xe (mẫu xe)/năm:</td><td style="font-weight: bold;">' + car_Brandname + '</td></tr >' +
+                                            '<tr><td>Địa chỉ Đại lý lắp đặt:</td><td style="font-weight: bold;">' + agentAddress + '</td></tr >' +
+                                            '</table>'; 
+                                         
+                                        html += table;
+                                    }
+                                }
+
+                                $('#contentTable').html(html);
+                                //contact.resetForm();
+                            }
+                        });
+                    }                    
+                });
+            },
+            resetForm: function () {
+                $('#phone').val("");
+            }
+        }
+        find.init();
+        function dateFormat(d) {
+            //console.log(d);
+            return ((d.getDate()) + "").padStart(2, "0")
+                + "/" + (d.getMonth() + 1 + "").padStart(2, "0")
+                + "/" + d.getFullYear();
+        }
+        function addMonth(dt, n) {
+            return new Date(dt.setMonth(dt.getMonth() + n));
+        }
+        String.prototype.replaceAt = function (index, replacement) {
+            return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+        }
+    </script>
+}

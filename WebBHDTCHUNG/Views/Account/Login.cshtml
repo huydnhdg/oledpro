@@ -1,0 +1,56 @@
+﻿@using BHDT_OledPro.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="w3ls-header">
+    <div class="header-mainLogo" style="text-align:center">
+        <a class="navbar-brand" href="~/">
+            <img src="~/Image/logo-oledpro.png" class="img-responsive" style="width:100px;" />
+        </a>
+    </div>
+    <div class="header-main">
+        <h2>Sign in System</h2>
+        <div class="header-bottom">
+            <div class="header-right w3agile">
+                <div class="header-left-bottom agileinfo">
+                    <div>
+                        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "", role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <fieldset>
+                                <div class="icon1">
+                                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="icon1">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="login-check">
+                                    <label>
+                                        @Html.CheckBoxFor(m => m.RememberMe)
+                                        @Html.LabelFor(m => m.RememberMe)
+                                    </label>
+                                </div>
+
+                                <div class="bottom">
+                                    <div style="margin-bottom: 10px;">
+
+                                    </div>
+                                    <input type="submit" value="Log in" class="btn btn-lg btn-success btn-block" />
+                                </div>
+                            </fieldset>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

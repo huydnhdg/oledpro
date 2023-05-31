@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Tra cứu";
+}
+<style>
+</style>
+<div class="row main">
+    <div class="main-login main-center">
+        <h3>Reset kích hoạt sản phẩm</h3>
+        <br />
+        <div>
+            <form>
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Mã cào</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-barcode" aria-hidden="true"></i></span>
+                            <input name="serial" type="text" id="serial" class="form-control" placeholder="Nhập mã cào" required />
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="form-group ">
+                    <input type="button" name="send" value="Xác nhận / Submit" id="send" class="btn btn-success" style="width:100%;" />
+                </div>
+
+                <p id="txt-info" class="w3-animate-left alert alert-danger" style="display:none;"></p>
+
+            </form>
+        </div>
+        <hr />
+        <div style="clear:both">
+
+        </div>
+    </div>
+
+    <div class="main-login main-center" id="contentTable">
+
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var find = {
+            init: function () {
+                find.registerEvent();
+            },
+            registerEvent: function () {
+                $('#send').off('click').on('click', function () {
+                    $("#txt-info").css("display", "none");
+
+                    var serialString = $('#serial').val();
+                    if (serialString.length == 0) {
+                        $("#txt-info").css("display", "block");
+                        $("#txt-info").text("Bạn chưa nhập serial.");
+                    }
+                    else {
+                        $.ajax({
+                            url: '/admin/Product/resetActivation',
+                            type: 'POST',
+                            dataType: 'json',
+                            data: {
+                                serial: serialString
+                            },
+                            success: function (ress) {
+                                var ob = $.parseJSON(ress);
+                                $("#txt-info").css("display", "block");
+                                $("#txt-info").text(ob.message);
+
+                            }
+                        });
+                    }
+                });
+            },
+            resetForm: function () {
+                $('#serial').val("");
+            }
+        }
+        find.init();
+        function dateFormat(d) {
+            //console.log(d);
+            return ((d.getDate()) + "").padStart(2, "0")
+                + "/" + (d.getMonth() + 1 + "").padStart(2, "0")
+                + "/" + d.getFullYear();
+        }
+        function addMonth(dt, n) {
+            return new Date(dt.setMonth(dt.getMonth() + n));
+        }
+        String.prototype.replaceAt = function (index, replacement) {
+            return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+        }
+    </script>
+}

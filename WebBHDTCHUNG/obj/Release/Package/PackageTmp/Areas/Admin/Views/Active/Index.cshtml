@@ -1,0 +1,122 @@
+﻿@model PagedList.IPagedList<BHDT_OledPro.Areas.Admin.Data.ActiveViewModel>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Sản phẩm đã kích hoạt</h1>
+    </div>
+</div>
+<div class="box-filter">
+    @using (Html.BeginForm("Index", "Active", FormMethod.Get))
+    {
+        <table class="table table-condensed">
+            <tr>
+                <td>
+                    <label>Tìm kiếm</label>
+                    @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "form-control", placeholder = "Tên sản phẩm, serial, code, model,..." })
+                </td>
+                <td>
+                    <label>Ngày kích hoạt:</label>
+
+                    @Html.TextBox("Startdate", ViewBag.currentStart as string, new { @class = "form-control", @type = "date" })
+
+                </td>
+                <td>
+                    <label></label>
+                    @Html.TextBox("Enddate", ViewBag.currentEnd as string, new { @class = "form-control", @type = "date" })
+                </td>
+            </tr>            
+            <tr>
+                <td colspan="3">
+                   <a href="/admin/active/create" type="button" class="btn btn-warning"><i class="fa fa-plus" aria-hidden="true"></i>Tạo mới</a>
+                   <a class="btn btn-default" href="@Url.Action("ExportExc")"><i class="fa fa-download"></i>Xuất file</a>
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i> Lọc dữ liệu</button>
+                </td>
+            </tr>
+        </table>
+    }
+</div>
+<div style="overflow-x:auto;">
+    <table class="table table-striped table-bordered table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Mã cào</th>
+                <th>Tên khách hàng</th>
+                <th>Sdt khách hàng</th>
+                <th>Địa chỉ</th>
+                <th>Tỉnh thành</th>
+                <th>Đại lý lắp đặt</th>
+                <th>Hãng xe/Đời xe</th>
+                <th>Model</th>
+                <th>Ngày kích hoạt</th>
+                <th>Ngày hết hạn</th>
+                <th>Người KH</th>
+                <th>Phân loại</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.Serial</td>
+                    <td>@item.CustomerName</td>
+                    <td>@item.CustomerPhone</td>
+                    <td>@item.CustomerAddress</td>
+                    <td>@item.CustomerCity</td>
+                    <td>@item.InstallationAgentAddress</td>
+                    <td>@item.CarBrandname</td>
+                    <td>@item.ProductCode</td>
+                    <td>
+                        @if (item.Activedate != null)
+                        {
+                            @Convert.ToDateTime(item.Activedate).ToString("dd/MM/yyyy")
+                        }
+                    </td>
+                    <td>
+                        @if (item.Activedate != null)
+                        {
+                            @Convert.ToDateTime(item.Activedate.Value.AddMonths(item.Limited ?? default(int))).ToString("dd/MM/yyyy")
+                        }
+                    </td>
+                    <td>
+                        @item.Activeby
+                    </td>
+                    <td>
+                        @if (item.Type == 1)
+                        {
+                            <p class="btn-success text-center">website</p>
+                        }
+                        else if (item.Type == 2)
+                        {
+                            <p class="btn-success text-center">website</p>
+                        }
+                        else if (item.Type == 3)
+                        {
+                            <p class="btn-success text-center">sms</p>
+                        }
+                        else
+                        {
+                            <p class="btn-success text-center">sms</p>
+                        }
+                    </td>
+                    <td>
+                        @if (User.IsInRole("Partner"))
+                        {
+                            <a class="btn" href="/admin/active/edit/@item.Id"><i class="fa fa-edit fa-fw"></i></a>
+                            <a class="btn" href="/admin/active/delete/@item.Id"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        }
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, currentFilter = ViewBag.CurrentFilter, currentStart = ViewBag.currentStart, currentEnd = ViewBag.currentEnd, currentStatus = ViewBag.Status }))
+<p class="pageof">page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount</p>

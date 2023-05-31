@@ -1,0 +1,78 @@
+2021-02-10 00:48:58.9523 BHDT_OledPro.Controllers.HomeController ::1
+2021-02-10 00:48:59.3191 BHDT_OledPro.Controllers.HomeController 
+2021-02-10 01:01:10.0458 BHDT_OledPro.Controllers.HomeController ::1
+2021-02-10 01:01:10.1438 BHDT_OledPro.Controllers.HomeController 
+2021-02-10 01:05:02.7953 BHDT_OledPro.Controllers.HomeController ::1
+2021-02-10 01:05:02.7953 BHDT_OledPro.Controllers.HomeController 
+2021-02-10 01:05:57.8297 BHDT_OledPro.Controllers.ActiveController oled1 oled1 Oled C1 Nam Ð?k Nông Hanoi 84912345678 haf
+2021-02-10 01:05:58.1345 BHDT_OledPro.Controllers.ActiveController active ok
+2021-05-18 09:39:16.1152 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 09:39:16.1562 BHDT_OledPro.Controllers.HomeController 
+2021-05-18 09:46:51.6354 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 09:46:51.7093 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 09:47:44.2426 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 09:47:44.2806 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 09:48:49.7516 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 09:48:49.7516 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 09:51:07.1547 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 09:51:07.1547 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 09:52:19.0834 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 09:52:19.1194 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 10:12:28.2028 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 10:12:28.2713 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 10:16:58.8646 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 10:16:58.9306 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 10:19:48.0867 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 10:19:48.1187 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 10:24:50.3502 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 10:24:50.3852 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 10:32:15.5068 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 10:32:15.8483 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 10:44:51.3475 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 10:44:51.3794 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 10:49:10.6249 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 10:49:10.7038 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 14:19:56.9714 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 14:19:57.0294 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 14:39:02.7813 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 14:39:02.8163 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 14:43:12.0961 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 14:43:12.1501 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 14:47:03.3822 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 14:47:03.4252 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 14:48:30.0413 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 14:48:30.0843 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 14:51:05.3763 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 14:51:05.4073 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 14:52:56.1155 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 14:52:56.1155 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 14:55:35.0601 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 14:55:35.0941 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 15:07:11.0751 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 15:07:11.1071 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 15:12:40.4228 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 15:12:40.4547 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 15:17:52.2737 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 15:17:52.3057 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-05-18 15:23:17.6399 BHDT_OledPro.Controllers.HomeController ::1
+2021-05-18 15:23:17.6958 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-06-03 09:22:29.8174 BHDT_OledPro.Controllers.HomeController ::1
+2021-06-03 09:22:29.8914 BHDT_OledPro.Controllers.HomeController 
+2021-06-03 09:35:54.9758 BHDT_OledPro.Controllers.HomeController ::1
+2021-06-03 09:35:55.0328 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-06-03 14:10:45.9465 BHDT_OledPro.Controllers.HomeController ::1
+2021-06-03 14:10:45.9835 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-06-03 14:49:24.4455 BHDT_OledPro.Controllers.HomeController ::1
+2021-06-03 14:49:24.4844 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-06-03 15:05:22.7717 BHDT_OledPro.Controllers.HomeController ::1
+2021-06-03 15:05:22.8226 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-06-03 15:38:36.0617 BHDT_OledPro.Controllers.HomeController ::1
+2021-06-03 15:38:36.1246 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-06-04 12:03:32.7802 BHDT_OledPro.Controllers.HomeController ::1
+2021-06-04 12:03:32.8151 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-06-04 12:10:03.4888 BHDT_OledPro.Controllers.HomeController ::1
+2021-06-04 12:10:03.5318 BHDT_OledPro.Controllers.HomeController 517e5486-cb22-4b7f-a398-99ed96e32231
+2021-06-21 16:11:44.2101 BHDT_OledPro.Controllers.HomeController ::1
+2021-06-21 16:11:44.3269 BHDT_OledPro.Controllers.HomeController 
+2021-06-21 16:12:27.5558 BHDT_OledPro.Controllers.HomeController ::1
+2021-06-21 16:12:27.5558 BHDT_OledPro.Controllers.HomeController 

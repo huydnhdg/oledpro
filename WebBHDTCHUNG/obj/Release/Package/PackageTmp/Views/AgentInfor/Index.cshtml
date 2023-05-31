@@ -1,0 +1,181 @@
+﻿@model IEnumerable<BHDT_OledPro.Models.StoreViewModel>
+@{
+    ViewBag.Title = "Đại lý";
+}
+
+<link href="~/Areas/Admin/Content/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+
+
+@section scripts{
+    <script src="~/Areas/Admin/Content/js/jquery-1.10.2.js"></script>
+    <script src="~/Areas/Admin/Content/js/bootstrap.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <script src="~/Areas/Admin/Content/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+
+    <script src="~/Areas/Admin/Content/js/sb-admin.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTables-example').dataTable();
+        });
+    </script>
+}
+<style>
+    .banner_nav_CK {
+        padding-top: 0px !important;
+        background: none !important;
+    }
+
+    .margin-top-15 {
+        margin-top: 15px;
+    }
+</style>
+<div class="row margin-top-15">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+
+            <!-- /.panel-heading -->
+            <div class="panel-body" style="font-size:14px;">
+                <div class="col-md-6">
+                    <b>Thông tin đại lý</b>
+                    <hr />
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>
+                                Tên tài khoản:
+                            </td>
+                            <td>
+                                @User.Identity.Name
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Số điện thoại:
+                            </td>
+                            <td>
+                                @ViewBag.user.PhoneNumber
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Email:
+                            </td>
+                            <td>
+                                @ViewBag.user.Email
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Ngày tạo:
+                            </td>
+                            <td>
+                                @ViewBag.user.Createdate
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <a href="/Manage/ChangePassword">
+                                    <i class="fa fa-key" aria-hidden="true"></i> Đổi mật khẩu
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <a class="dropdown-item logoff" href="javascript:document.getElementById('logoutForm').submit()"> <i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất</a>
+                                }
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <b>Thông tin sản phẩm</b>
+                    <hr />
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>
+                                <label class="text-danger">Sản phẩm chưa kích hoạt:</label>
+                            </td>
+                            <td>
+                                <label class="text-danger">@ViewBag.modelnoactive</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="text-success">Sản phẩm đã kích hoạt:</label>
+                            </td>
+                            <td>
+                                <label class="text-success">@ViewBag.modelactive</label>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+
+            <!-- /.panel-heading -->
+            <div class="panel-body" style="font-size:14px;">
+                <div class="">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>Tên sản phẩm</th>
+                                <th>Mã cào</th>
+                                <th>Code</th>
+                                <th>Hạn BH</th>
+                                <th>Ngày KH</th>
+                                <th>Ngày NK</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Name</td>
+                                    <td>@item.Serial</td>
+                                    <td>@item.Code</td>
+                                    <td>@item.Limited</td>
+                                    <td>
+                                        @if (item.NgayKH != null)
+                                        {
+                                            <p class="text-success btn-success">@Convert.ToDateTime(item.NgayKH).ToString("dd/MM/yyyy")</p>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (item.NgayNK != null)
+                                        {
+                                            @Convert.ToDateTime(item.NgayNK).ToString("dd/MM/yyyy")
+                                        }
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+

@@ -1,0 +1,212 @@
+﻿@model BHDT_OledPro.Areas.Admin.Data.ActiveViewModel
+
+@{
+    ViewBag.Title = "Active";
+    List<BHDT_OledPro.Models.Province> lprovince = (List<BHDT_OledPro.Models.Province>)TempData["province"];
+}
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Nhập thông tin kích hoạt</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Activedate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Activedate, "{0:yyyy-MM-dd}", new { @type = "date", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Activedate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.Activeby, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Activeby, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Activeby, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.ProductId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductId, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.CustomerId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerId, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustomerId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.Buydate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Buydate, "{0:yyyy-MM-dd}", new { @type = "date", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Buydate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.Serial, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Serial, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Serial, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.ProductName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustomerPhone, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerPhone, new { htmlAttributes = new { @class = "form-control",onblur="GetCustomer(this)" } })
+                @Html.ValidationMessageFor(model => model.CustomerPhone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustomerName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustomerName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select name="City" onchange="GetCity()" id="City" class="form-control HeightCBB" required placeholder="Nhập tỉnh thành">
+                    <option value="">Nhập Tỉnh thành</option>
+                    @foreach (var item in lprovince)
+                    {
+                        <option value="@item.Name">@item.Name</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.District, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select name="District" id="District" class="form-control HeightCBB" required placeholder="Nhập Quận huyện">
+                    <option value="">Nhập Quận huyện</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.Limited, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Limited, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Limited, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Kích hoạt" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section scripts{
+    <script>
+        function GetCustomer() {
+            var phone = $("#CustomerPhone").val();
+            $.ajax({
+                url: '/Active/GetCustomer',
+                type: 'POST',
+                datatype: 'application/json',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    phone: phone
+                }),
+                success: function (result) {
+                    var ob = $.parseJSON(result);
+                    if (ob.Name.length > 3) {
+                        $("#CustomerName").val(ob.Name);
+                        $("#Address").val(ob.Address);
+                        $('#City').append(new Option(ob.City, ob.City, true, true));
+                        $('#District').append(new Option(ob.District, ob.District, true, true));
+                        $("#Email").val(ob.Email);
+                    }
+                },
+                error: function () {
+                    $("#CustomerName").val("");
+                    $("#Address").val("");
+                    $("#Email").val("");
+                    $('#City').append(new Option("Nhập Tỉnh thành", "", true, true));
+                    $('#District').append(new Option("Nhập Quận huyện", "", true, true));
+                },
+            });
+        }
+        function GetCity() {
+            $("#District").html("");
+            $("#District").append
+                ($('<option></option>').val("").html("Nhập Quận huyện"))
+            var name = $("#City").val();
+            $.ajax
+                ({
+                    url: '/Active/GetCity',
+                    type: 'POST',
+                    datatype: 'application/json',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        name: name
+                    }),
+                    success: function (result) {
+                        $.each($.parseJSON(result), function (i, city) {
+                            $("#District").append
+                                ($('<option></option>').val(city).html(city))
+                        })
+                    },
+                    error: function () {
+                        alert("Hệ thống xảy ra lỗi.")
+                    },
+                });
+        }
+    </script>
+    }

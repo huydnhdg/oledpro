@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CMSBHDTCHUNGModelStoreContainer" CdmEntityContainer="CMSBHDTCHUNGEntities">
+    <EntitySetMapping Name="Brandnames">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.Brandname">
+        <MappingFragment StoreEntitySet="Brandname">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+          <ScalarProperty Name="Createby" ColumnName="Createby" />
+          <ScalarProperty Name="PhoneSend" ColumnName="PhoneSend" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="MadeIn" ColumnName="MadeIn" />
+          <ScalarProperty Name="Exportdate" ColumnName="Exportdate" />
+          <ScalarProperty Name="Arisingdate" ColumnName="Arisingdate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Limited" ColumnName="Limited" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+          <ScalarProperty Name="Createby" ColumnName="Createby" />
+          <ScalarProperty Name="Importdate" ColumnName="Importdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductAgents">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.ProductAgent">
+        <MappingFragment StoreEntitySet="ProductAgent">
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="InstallationAgentAddress" ColumnName="InstallationAgentAddress" />
+          <ScalarProperty Name="CarBrandname" ColumnName="CarBrandname" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+          <ScalarProperty Name="Createby" ColumnName="Createby" />
+          <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Importdate" ColumnName="Importdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Districts">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.District">
+        <MappingFragment StoreEntitySet="District">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+          <ScalarProperty Name="LatiLongTude" ColumnName="LatiLongTude" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provinces">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.Province">
+        <MappingFragment StoreEntitySet="Province">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="TelephoneCode" ColumnName="TelephoneCode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+          <ScalarProperty Name="Createby" ColumnName="Createby" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="CMSBHDTCHUNGModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetUser">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="AspNetRole">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="SendMTs">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.SendMT">
+        <MappingFragment StoreEntitySet="SendMT">
+          <ScalarProperty Name="Request_ID" ColumnName="Request_ID" />
+          <ScalarProperty Name="Message_Type" ColumnName="Message_Type" />
+          <ScalarProperty Name="Command_Code" ColumnName="Command_Code" />
+          <ScalarProperty Name="Service_ID" ColumnName="Service_ID" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempSms">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.TempSm">
+        <MappingFragment StoreEntitySet="TempSms">
+          <ScalarProperty Name="Hotline" ColumnName="Hotline" />
+          <ScalarProperty Name="Command_Code" ColumnName="Command_Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PieNames">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.PieName">
+        <MappingFragment StoreEntitySet="PieName">
+          <ScalarProperty Name="Name5" ColumnName="Name5" />
+          <ScalarProperty Name="Name4" ColumnName="Name4" />
+          <ScalarProperty Name="Name3" ColumnName="Name3" />
+          <ScalarProperty Name="Name2" ColumnName="Name2" />
+          <ScalarProperty Name="Name1" ColumnName="Name1" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempBrandnames">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.TempBrandname">
+        <MappingFragment StoreEntitySet="TempBrandname">
+          <ScalarProperty Name="Activeweb" ColumnName="Activeweb" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TempWarranti" ColumnName="TempWarranti" />
+          <ScalarProperty Name="TempActive" ColumnName="TempActive" />
+          <ScalarProperty Name="TempSearch" ColumnName="TempSearch" />
+          <ScalarProperty Name="ShowName" ColumnName="ShowName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Createby" ColumnName="Createby" />
+          <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductWarrantis">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.ProductWarranti">
+        <MappingFragment StoreEntitySet="ProductWarranti">
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="InstallationAgentAddress" ColumnName="InstallationAgentAddress" />
+          <ScalarProperty Name="CarBrandname" ColumnName="CarBrandname" />
+          <ScalarProperty Name="Checkby" ColumnName="Checkby" />
+          <ScalarProperty Name="Checkdate" ColumnName="Checkdate" />
+          <ScalarProperty Name="Createby" ColumnName="Createby" />
+          <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="PhoneWarranti" ColumnName="PhoneWarranti" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductActives">
+      <EntityTypeMapping TypeName="CMSBHDTCHUNGModel.ProductActive">
+        <MappingFragment StoreEntitySet="ProductActive">
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="InstallationAgentAddress" ColumnName="InstallationAgentAddress" />
+          <ScalarProperty Name="CarBrandname" ColumnName="CarBrandname" />
+          <ScalarProperty Name="Buydate" ColumnName="Buydate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Activeby" ColumnName="Activeby" />
+          <ScalarProperty Name="Activedate" ColumnName="Activedate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

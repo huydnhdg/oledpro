@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <h1 class="page-header">Thống kê</h1>
+    <div class="col-lg-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Sản phẩm
+            </div>
+            <div class="panel-body">
+                <h3 style="color:lightpink">@ViewBag.product <i style="font-size:50px" class="fa fa-gift" aria-hidden="true"></i></h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                Kích hoạt bảo hành
+            </div>
+            <div class="panel-body">
+                <h3 style="color:lightpink">@ViewBag.active <i style="font-size:50px" class="fa fa-cogs" aria-hidden="true"></i></h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Yêu cầu bảo hành
+            </div>
+            <div class="panel-body">
+                <h3 style="color:lightpink">@ViewBag.warranti <i style="font-size:50px" class="fa fa-wrench fa-fw" aria-hidden="true"></i></h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                Đại lý
+            </div>
+            <div class="panel-body">
+                <h3 style="color:lightpink">@ViewBag.agent <i style="font-size:50px" class="fa fa-sitemap" aria-hidden="true"></i></h3>
+            </div>
+        </div>
+    </div>
+    @if (User.Identity.Name == "administrator")
+    {
+
+    }
+    else
+    {
+        <div class="col-md-6">
+            <div id="chartActive" style="height: 370px; width: 100%;"></div>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6">
+            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+        </div>
+
+        <div class="col-md-6">
+            <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6">
+            <div id="chartContainer3" style="height: 370px; width: 100%;"></div>
+        </div>
+    }
+
+
+</div>
+@section scripts{
+    <script>
+		window.onload = function () {
+
+            var charta = new CanvasJS.Chart("chartActive", {
+                theme: "light2",
+				animationEnabled: true,
+			title: {
+				text: ""
+			},
+                data: [
+                    {
+				        type: "doughnut",
+				        dataPoints: @Html.Raw(ViewBag.DataPoints)
+			        }
+                ]
+			});
+            charta.render();
+
+            var chartaa = new CanvasJS.Chart("chartContainer2", {
+                theme: "light2",
+				animationEnabled: true,
+			title: {
+				text: ""
+			},
+                data: [
+                    {
+				        type: "pie",
+				        dataPoints: @Html.Raw(ViewBag.DataPoints2)
+			        }
+                ]
+			});
+            chartaa.render();
+
+            var chartaaa = new CanvasJS.Chart("chartContainer3", {
+                theme: "light2",
+				animationEnabled: true,
+			title: {
+				text: ""
+			},
+                data: [
+                    {
+				        type: "pie",
+				        dataPoints: @Html.Raw(ViewBag.DataPoints3)
+			        }
+                ]
+			});
+            chartaaa.render();
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                theme: "light2",
+                animationEnabled: false,
+                title: {
+                    text: ""
+                },
+                data: [
+                    {
+                        type: "column",
+                        dataPoints: @Html.Raw(ViewBag.DataPoints1)
+                    }
+                ]
+            });
+            chart.render();
+		}
+    </script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+}

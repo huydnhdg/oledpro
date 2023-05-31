@@ -1,0 +1,224 @@
+2020-11-02 13:36:16.4546 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-02 13:36:16.5125 BHDT_OledPro.Controllers.HomeController 
+2020-11-02 13:36:34.2753 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-02 13:36:34.2753 BHDT_OledPro.Controllers.HomeController 
+2020-11-02 13:36:37.1775 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-02 13:36:37.1775 BHDT_OledPro.Controllers.HomeController 
+2020-11-02 13:36:43.4592 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-02 13:36:43.4592 BHDT_OledPro.Controllers.HomeController 
+2020-11-02 13:37:00.2207 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-02 13:37:00.2247 BHDT_OledPro.Controllers.HomeController 
+2020-11-02 17:13:48.4884 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-02 17:13:48.5276 BHDT_OledPro.Controllers.HomeController 
+2020-11-02 17:14:09.8767 BHDT_OledPro.Controllers.SearchController 
+2020-11-02 17:14:11.3295 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-02 17:16:40.6948 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-02 17:16:40.8367 BHDT_OledPro.Controllers.HomeController 
+2020-11-02 17:17:02.1597 BHDT_OledPro.Controllers.SearchController 0912345678
+2020-11-02 17:17:02.6104 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-02 17:17:21.2771 BHDT_OledPro.Controllers.SearchController 0912345678
+2020-11-02 17:17:21.2911 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-02 17:18:46.3472 BHDT_OledPro.Controllers.SearchController 0912345678
+2020-11-02 17:18:46.3642 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-02 17:19:11.2807 BHDT_OledPro.Controllers.SearchController 0912345678
+2020-11-02 17:19:11.3007 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-02 17:19:21.7247 BHDT_OledPro.Controllers.SearchController 0912345678
+2020-11-02 17:19:27.5029 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-02 17:20:27.3757 BHDT_OledPro.Controllers.SearchController 0912345678
+2020-11-02 17:20:28.8193 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-02 17:21:24.6160 BHDT_OledPro.Controllers.SearchController 0912345678
+2020-11-02 17:21:25.2098 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-02 17:23:39.1178 BHDT_OledPro.Controllers.SearchController 0942587796
+2020-11-02 17:23:39.1378 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-02 17:23:41.8652 BHDT_OledPro.Controllers.SearchController 0942587796
+2020-11-02 17:23:41.8842 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-02 17:24:00.2016 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-02 17:24:00.2526 BHDT_OledPro.Controllers.HomeController 
+2020-11-02 17:24:13.7882 BHDT_OledPro.Controllers.SearchController 0942587796
+2020-11-02 17:24:16.2782 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-02 17:25:51.4067 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-02 17:26:24.1684 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-02 20:37:49.9319 BHDT_OledPro.Controllers.SearchController 6
+2020-11-02 20:38:08.8663 BHDT_OledPro.Controllers.SearchController 6
+2020-11-02 20:39:32.0595 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-02 20:39:32.0954 BHDT_OledPro.Controllers.HomeController 
+2020-11-02 20:40:40.2917 BHDT_OledPro.Controllers.SearchController 6
+2020-11-02 20:41:00.5617 BHDT_OledPro.Controllers.SearchController 6
+2020-11-02 20:44:25.6214 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-02 20:44:25.6654 BHDT_OledPro.Controllers.HomeController 
+2020-11-02 20:45:12.7716 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-02 20:45:18.8101 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-02 20:45:32.0740 BHDT_OledPro.Controllers.SearchController 0942587796
+2020-11-02 20:45:35.8810 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-02 20:47:36.3071 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-02 20:47:36.3481 BHDT_OledPro.Controllers.HomeController 
+2020-11-02 20:52:31.4537 BHDT_OledPro.Controllers.SearchController 0942587796
+2020-11-02 20:52:37.4435 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-02 21:31:33.2336 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-02 21:31:42.4106 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-02 21:33:19.1072 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-02 21:33:24.1080 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:39:55.9106 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-03 08:39:55.9636 BHDT_OledPro.Controllers.HomeController 
+2020-11-03 08:40:14.7738 BHDT_OledPro.Controllers.SearchController 0942587796
+2020-11-03 08:40:20.0066 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:41:21.4128 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:41:21.4508 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:41:53.1907 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:41:53.2166 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:41:59.6035 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:41:59.6652 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:43:33.3338 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:43:33.3577 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:43:37.4280 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:43:37.4621 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:43:40.1003 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:43:40.1323 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:43:41.6748 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:43:41.7045 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:43:42.6428 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:43:42.6698 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:43:43.4513 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:43:43.4727 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:43:44.1058 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:43:44.1288 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:43:44.8872 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:43:44.9132 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:45:53.7178 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:45:53.7434 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:46:46.8302 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:46:46.8633 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:47:02.4722 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:47:02.4992 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:48:35.1810 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:48:35.2211 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:48:43.8198 BHDT_OledPro.Controllers.SearchController 0
+2020-11-03 08:48:55.4453 BHDT_OledPro.Controllers.SearchController 0912345678
+2020-11-03 08:48:55.4819 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-03 08:49:32.1893 BHDT_OledPro.Controllers.SearchController 0912345678
+2020-11-03 08:49:32.2053 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-03 08:49:42.9805 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:49:43.0065 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:49:48.1173 BHDT_OledPro.Controllers.SearchController 8494258779
+2020-11-03 08:49:48.1693 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:49:52.2034 BHDT_OledPro.Controllers.SearchController 84942587798
+2020-11-03 08:49:52.2184 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-03 08:50:33.4566 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:50:33.4886 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:55:40.5997 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-03 08:55:40.7936 BHDT_OledPro.Controllers.HomeController 
+2020-11-03 08:55:53.8012 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:55:54.6407 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 08:58:10.6535 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-03 08:58:10.7874 BHDT_OledPro.Controllers.HomeController 
+2020-11-03 08:58:40.0922 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 08:58:40.5735 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:02:19.7157 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:02:19.7467 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:06:21.4631 BHDT_OledPro.Controllers.SearchController 0912345678
+2020-11-03 09:06:21.4913 BHDT_OledPro.Controllers.SearchController phone not found or valid
+2020-11-03 09:06:46.6655 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:06:46.7318 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:07:55.4031 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:07:55.4381 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:10:54.1043 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:10:54.1278 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:13:07.1625 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:13:07.1914 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:15:52.4959 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:15:52.5219 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:16:43.4795 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:16:43.5035 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:17:42.0551 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:17:42.0866 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:18:26.6802 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:18:26.7036 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:22:11.3170 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:22:11.3439 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:22:33.3576 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:22:33.3955 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:22:46.1367 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:22:46.1617 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:22:57.7455 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:22:57.7694 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:23:49.5684 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:23:49.5944 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:24:55.2719 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:24:57.2174 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:25:21.7198 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:25:21.7458 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:26:22.1681 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:26:22.2224 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-03 09:33:01.7795 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-03 09:33:01.8124 BHDT_OledPro.Controllers.HomeController 
+2020-11-03 09:33:09.4700 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:33:14.5856 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:33:41.3892 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-03 09:33:41.4482 BHDT_OledPro.Controllers.HomeController 
+2020-11-03 09:33:49.0545 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:34:16.1060 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-03 09:34:16.1539 BHDT_OledPro.Controllers.HomeController 
+2020-11-03 09:34:24.2536 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:39:45.6574 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-03 09:39:45.6974 BHDT_OledPro.Controllers.HomeController 
+2020-11-03 09:39:52.0650 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-03 09:39:52.3716 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-04 10:04:32.2585 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-04 10:04:32.3075 BHDT_OledPro.Controllers.HomeController 
+2020-11-04 11:49:11.7483 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-04 11:49:11.7883 BHDT_OledPro.Controllers.HomeController 
+2020-11-04 11:49:25.9990 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-04 11:49:27.4121 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-04 12:53:28.5767 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-04 12:53:28.6616 BHDT_OledPro.Controllers.HomeController 
+2020-11-04 12:53:56.8156 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-04 12:53:57.2777 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-04 12:55:11.5544 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-04 12:55:11.5814 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-04 13:20:15.1835 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-04 13:20:15.2974 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-04 13:20:49.3122 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-04 13:20:49.3442 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-04 13:21:23.9031 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-04 13:21:23.9315 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-04 16:39:18.5644 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-04 16:39:18.6003 BHDT_OledPro.Controllers.HomeController 
+2020-11-04 16:41:03.5365 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-04 16:41:03.5365 BHDT_OledPro.Controllers.HomeController 
+2020-11-04 16:41:19.6231 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-04 16:41:19.6580 BHDT_OledPro.Controllers.HomeController 
+2020-11-04 16:41:31.8024 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-04 16:41:32.3745 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-05 10:30:17.6714 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-05 10:30:17.7128 BHDT_OledPro.Controllers.HomeController 
+2020-11-05 10:30:51.3511 BHDT_OledPro.Controllers.SearchController 84971428999
+2020-11-05 10:30:52.2497 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-05 10:31:23.0367 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-05 10:31:23.1297 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-05 11:19:47.5707 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-05 11:19:47.6039 BHDT_OledPro.Controllers.HomeController 
+2020-11-05 11:22:11.3245 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-05 11:22:11.8457 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-05 11:27:15.4001 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-05 11:27:15.4331 BHDT_OledPro.Controllers.HomeController 
+2020-11-05 11:27:27.7151 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-05 11:27:28.2452 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-05 11:29:13.7941 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-05 11:29:13.8281 BHDT_OledPro.Controllers.HomeController 
+2020-11-05 11:29:21.5600 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-05 11:29:28.7543 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-05 11:31:11.5313 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-05 11:31:11.5655 BHDT_OledPro.Controllers.HomeController 
+2020-11-05 11:31:19.5859 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-05 11:33:52.1477 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-05 11:33:52.1937 BHDT_OledPro.Controllers.HomeController 
+2020-11-05 11:34:08.5868 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-05 11:34:09.0487 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-05 11:37:34.7000 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-05 11:37:34.7340 BHDT_OledPro.Controllers.HomeController 
+2020-11-05 11:37:47.3912 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-05 11:37:47.8180 BHDT_OledPro.Controllers.SearchController phone ok
+2020-11-05 11:38:33.4869 BHDT_OledPro.Controllers.HomeController ::1
+2020-11-05 11:38:33.5189 BHDT_OledPro.Controllers.HomeController 
+2020-11-05 11:38:41.1837 BHDT_OledPro.Controllers.SearchController 84942587796
+2020-11-05 11:38:41.5988 BHDT_OledPro.Controllers.SearchController phone ok

@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "upload";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Chuyển sản phẩm cho đại lý</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+    @using (Html.BeginForm("upload", "Agent", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div style="margin:10px 0px;line-height:30px;" class="container">
+            <div class="form-group">
+                <input class="form-control" type="file" name="UploadedFile" placeholder="" />
+                @if (ViewBag.mess != null)
+                {
+                    <p class="text-danger">@ViewBag.mess</p>
+                }
+            </div>
+            <div class="form-group">
+                <button type="submit" name="Submit" class="btn btn-warning"><i class="fa fa-magic" aria-hidden="true"></i> Upload file</button>
+                <a class="btn btn-danger" href="~/Data/temp_product_agent.xlsx" download="/temp_product_agent"><i class="fa fa-file-excel-o"></i> File mẫu</a>
+            </div>
+        </div>
+    }
+</div>
+
+@if (Model != null)
+{
+    <table class="table table-bordered table-data">
+        <thead>
+            <tr>
+                <th></th>
+                <th>tên sản phẩm</th>
+                <th>đại lý</th>
+                <th>ngày nhập kho</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @if (item.Error != null)
+                        {
+                            <p class="text-danger">@item.Error</p>
+                        }
+                    </td>
+                    <td>@item.ProdName</td>
+                    <td>@item.Agent</td>
+                    <td>@item.Importdate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}

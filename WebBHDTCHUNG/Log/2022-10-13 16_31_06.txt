@@ -1,0 +1,4 @@
+2022-09-13 14:28:13.8321 BHDT_OledPro.Controllers.HomeController ::1
+2022-09-13 14:28:13.9091 BHDT_OledPro.Controllers.HomeController 
+2022-09-13 14:32:35.9082 BHDT_OledPro.Controllers.HomeController ::1
+2022-09-13 14:32:36.0042 BHDT_OledPro.Controllers.HomeController 

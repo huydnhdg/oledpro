@@ -1,0 +1,59 @@
+﻿<ul class="nav" id="side-menu">
+    <li>
+        <a href="/admin/home"><i class="fa fa-tachometer" aria-hidden="true"></i> Thống kê</a>
+    </li>
+    <li>
+        <a href="/admin/product"><i class="fa fa-gift" aria-hidden="true"></i> Sản phẩm</a>
+    </li>
+    <li>
+        <a href="/admin/customer"><i class="fa fa-users" aria-hidden="true"></i> Khách hàng</a>
+    </li>
+    <li>
+        <a href="/admin/active"><i class="fa fa-cogs" aria-hidden="true"></i> Kích hoạt</a>
+    </li>
+    <li>
+        <a href="/admin/warranti"><i class="fa fa-wrench fa-fw"></i> Bảo hành</a>
+    </li>
+    <li>
+        <a href="#"><i class="fa fa-sitemap" aria-hidden="true"></i> Đại lý<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+            <li>
+                <a href="/admin/agent">DS Đại lý</a>
+            </li>
+            <li>
+                <a href="/admin/productagent">DS Sản phẩm</a>
+            </li>
+        </ul>
+        <!-- /.nav-second-level -->
+    </li>
+    @if (ViewBag.brand != null || User.IsInRole("Admin"))
+    {
+        <li>
+            <a href="/admin/brandname"><i class="fa fa-paper-plane" aria-hidden="true"></i> Brandname</a>
+        </li>
+    }
+    <li>
+        <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Tài khoản<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+            @if (User.IsInRole("Admin"))
+            {
+                <li>
+                    <a href="/admin/managerole">List Role</a>
+                </li>
+            }
+            <li>
+                <a href="/admin/manageuser">List User</a>
+            </li>
+        </ul>
+        <!-- /.nav-second-level -->
+    </li>
+    <li>
+        <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Config<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+            <li>
+                <a href="/admin/piename">Tên sản phẩm</a>
+            </li>
+        </ul>
+        <!-- /.nav-second-level -->
+    </li>
+</ul>

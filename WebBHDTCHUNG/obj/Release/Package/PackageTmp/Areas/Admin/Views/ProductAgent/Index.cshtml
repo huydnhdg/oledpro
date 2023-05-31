@@ -1,0 +1,89 @@
+﻿@model IEnumerable<BHDT_OledPro.Areas.Admin.Data.ProductAgentViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+@section scripts{
+    <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnExport").click(function () {
+                let table = document.getElementsByTagName("table");
+                TableToExcel.convert(table[0], { // html code may contain multiple tables so here we are refering to 1st table tag
+                    name: `product_agent.xlsx`, // fileName you could use any name
+                    sheet: {
+                        name: 'Sheet 1' // sheetName
+                    }
+                });
+            });
+        });
+    </script>
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Sản phẩm đại lý</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="btn-right">
+                    @*<a href="/admin/active/create" type="button" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Kích hoạt sản phẩm</a>*@
+                </div>
+            </div>
+
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>Tên sản phẩm</th>
+                                <th>Serial</th>
+                                <th>Tên đại lý</th>
+                                <th>Ngày nhập</th>
+                                <th>Ngày tạo</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.ProductName</td>
+                                    <td>@item.Serial</td>
+                                    <td>@item.AgentName</td>
+                                    <td>
+                                        @if (item.Importdate != null)
+                                        {
+                                            @Convert.ToDateTime(item.Importdate).ToString("dd/MM/yyyy")
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (item.Createdate != null)
+                                        {
+                                            @Convert.ToDateTime(item.Createdate).ToString("dd/MM/yyyy")
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (User.IsInRole("Partner"))
+                                        {
+                                            <a class="btn" href="/admin/productagent/edit/@item.Id"><i class="fa fa-edit fa-fw"></i></a>
+                                            <a class="btn" href="/admin/productagent/delete/@item.Id"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+

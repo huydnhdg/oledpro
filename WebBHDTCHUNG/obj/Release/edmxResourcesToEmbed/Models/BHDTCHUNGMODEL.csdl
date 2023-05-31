@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CMSBHDTCHUNGModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Brandname">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Createdate" Type="DateTime" Precision="3" />
+    <Property Name="Createby" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneSend" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Serial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MadeIn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Exportdate" Type="DateTime" Precision="3" />
+    <Property Name="Arisingdate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Limited" Type="Int32" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Createdate" Type="DateTime" Precision="3" />
+    <Property Name="Createby" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Importdate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ProductAgent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Createdate" Type="DateTime" Precision="3" />
+    <Property Name="Createby" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="AgentId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProductId" Type="Int64" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Importdate" Type="DateTime" Precision="3" />
+    <Property Name="CarBrandname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InstallationAgentAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="CMSBHDTCHUNGEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brandnames" EntityType="Self.Brandname" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="ProductAgents" EntityType="Self.ProductAgent" />
+    <EntitySet Name="Districts" EntityType="CMSBHDTCHUNGModel.District" />
+    <EntitySet Name="Provinces" EntityType="CMSBHDTCHUNGModel.Province" />
+    <AssociationSet Name="FK_District_Province" Association="CMSBHDTCHUNGModel.FK_District_Province">
+      <End Role="Province" EntitySet="Provinces" />
+      <End Role="District" EntitySet="Districts" />
+    </AssociationSet>
+    <EntitySet Name="AspNetUsers" EntityType="CMSBHDTCHUNGModel.AspNetUser" />
+    <EntitySet Name="AspNetRoles" EntityType="CMSBHDTCHUNGModel.AspNetRole" />
+    <AssociationSet Name="AspNetUserRoles" Association="CMSBHDTCHUNGModel.AspNetUserRoles">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <EntitySet Name="SendMTs" EntityType="CMSBHDTCHUNGModel.SendMT" />
+    <EntitySet Name="TempSms" EntityType="CMSBHDTCHUNGModel.TempSm" />
+    <EntitySet Name="PieNames" EntityType="CMSBHDTCHUNGModel.PieName" />
+    <EntitySet Name="TempBrandnames" EntityType="CMSBHDTCHUNGModel.TempBrandname" />
+    <EntitySet Name="Customers" EntityType="CMSBHDTCHUNGModel.Customer" />
+    <EntitySet Name="ProductWarrantis" EntityType="CMSBHDTCHUNGModel.ProductWarranti" />
+    <EntitySet Name="ProductActives" EntityType="CMSBHDTCHUNGModel.ProductActive" />
+  </EntityContainer>
+  <EntityType Name="District">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LatiLongTude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProvinceId" Type="Int32" Nullable="false" />
+    <Property Name="SortOrder" Type="Int32" />
+    <Property Name="IsPublished" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="Province" Relationship="CMSBHDTCHUNGModel.FK_District_Province" FromRole="District" ToRole="Province" />
+  </EntityType>
+  <EntityType Name="Province">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TelephoneCode" Type="Int32" />
+    <Property Name="ZipCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CountryId" Type="Int32" Nullable="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="SortOrder" Type="Int32" />
+    <Property Name="IsPublished" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="Districts" Relationship="CMSBHDTCHUNGModel.FK_District_Province" FromRole="Province" ToRole="District" />
+  </EntityType>
+  <Association Name="FK_District_Province">
+    <End Type="CMSBHDTCHUNGModel.Province" Role="Province" Multiplicity="1" />
+    <End Type="CMSBHDTCHUNGModel.District" Role="District" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Province">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="District">
+        <PropertyRef Name="ProvinceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Createby" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Createdate" Type="DateTime" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetRoles" Relationship="CMSBHDTCHUNGModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="CMSBHDTCHUNGModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+  </EntityType>
+  <Association Name="AspNetUserRoles">
+    <End Type="CMSBHDTCHUNGModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+    <End Type="CMSBHDTCHUNGModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityType Name="SendMT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Service_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Command_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Message_Type" Type="Int32" />
+    <Property Name="Request_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TempSm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Command_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Hotline" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PieName">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TempBrandname">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ShowName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TempSearch" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TempActive" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TempWarranti" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Activeweb" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Createdate" Type="DateTime" Precision="3" />
+    <Property Name="Createby" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductWarranti">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="Int64" />
+    <Property Name="CustomerId" Type="Int64" />
+    <Property Name="PhoneWarranti" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Createdate" Type="DateTime" Precision="3" />
+    <Property Name="Createby" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Checkdate" Type="DateTime" Precision="3" />
+    <Property Name="Checkby" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="CarBrandname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InstallationAgentAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductActive">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Activedate" Type="DateTime" Precision="3" />
+    <Property Name="Activeby" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProductId" Type="Int64" />
+    <Property Name="CustomerId" Type="Int64" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Buydate" Type="DateTime" Precision="3" />
+    <Property Name="CarBrandname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InstallationAgentAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

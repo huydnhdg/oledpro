@@ -1,0 +1,122 @@
+﻿ @model PagedList.IPagedList<BHDT_OledPro.Models.Product>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Sản phẩm</h1>
+    </div>
+</div>
+<div class="box-filter">
+    @using (Html.BeginForm("Index", "Product", FormMethod.Get))
+    {
+        <table class="table table-condensed">
+            <tr>
+                <td>
+                    <label>Tìm kiếm</label>
+                    @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "form-control", placeholder = "Tên sản phẩm, serial, code, model,..." })
+                </td>
+                <td>
+                    <label>Ngày xuất kho:</label>
+                    
+                    @Html.TextBox("Startdate", ViewBag.currentStart as string, new { @class = "form-control", @type = "date" })
+
+                </td>
+                <td>
+                    <label></label>
+                    @Html.TextBox("Enddate", ViewBag.currentEnd as string, new { @class = "form-control", @type = "date" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <label>Ngày sản xuất:</label>
+                    @Html.TextBox("sdate", ViewBag.currentS as string, new { @class = "form-control", @type = "date" })
+                </td>
+                <td>
+                    <label></label>
+                    @Html.TextBox("edate", ViewBag.currentE as string, new { @class = "form-control", @type = "date" })
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <a href="/admin/product/create" type="button" class="btn btn-warning"><i class="fa fa-plus" aria-hidden="true"></i>Tạo mới</a>
+                    <!--<a class="iframe alert-warning" href="/admin/product/create" type="button">Tạo mới</a>-->
+                    <a href="/admin/product/resetActivation" type="button" class="btn btn-info"><i class="fa fa-refresh" aria-hidden="true"></i> Reset kích hoạt</a>
+                    <a href="/admin/product/uploadfile" type="button" class="btn btn-success"><i class="fa fa-upload" aria-hidden="true"></i> Upload file</a>
+                    <a class="btn btn-default" href="@Url.Action("ExportExc")"><i class="fa fa-download"></i>Xuất file</a>
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i> Lọc dữ liệu</button>
+                </td>
+            </tr>
+        </table>
+    }
+</div>
+<div style="overflow-x:auto;">
+    <table class="table table-striped table-bordered table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Mã cào</th>
+                <th>Serial</th>
+                <th>Model</th>
+                <th>Xuất kho</th>
+                <th>Sản xuất</th>
+                <th>Bảo hành</th>
+                <th>Trạng thái</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Serial</td>
+                    <td>@item.Code</td>
+                    <td>@item.Model</td>
+                    <td>
+                        @if (item.Exportdate != null)
+                        {
+                            @Convert.ToDateTime(item.Exportdate).ToString("dd/MM/yyyy")
+                        }
+                    </td>
+                    <td>
+                        @if (item.Arisingdate != null)
+                        {
+                            @Convert.ToDateTime(item.Arisingdate).ToString("dd/MM/yyyy")
+                        }
+                    </td>
+                    <td>@item.Limited</td>
+                    <td>
+                        @if (item.Status == 1)
+                        {
+                            <p class="btn-success text-center">Kích hoạt</p>
+                        }
+                        else
+                        {
+
+                        }
+                    </td>
+                    <td>
+                        @if (User.IsInRole("Partner") && item.Status != 1)
+                        {
+                            <a class="btn" href="/admin/product/edit/@item.Id"><i class="fa fa-edit fa-fw"></i></a>
+                            <a class="btn" href="/admin/product/delete/@item.Id"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            <a class="btn" href="/admin/product/active/@item.Id"><i class="fa fa-cogs" aria-hidden="true"></i></a>
+                        }
+                        else if (User.IsInRole("Partner"))
+                        {
+                            <a class="btn" href="/admin/product/edit/@item.Id"><i class="fa fa-edit fa-fw"></i></a>
+                            <a class="btn" href="/admin/product/delete/@item.Id"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, currentFilter = ViewBag.CurrentFilter, currentStart = ViewBag.currentStart, currentEnd = ViewBag.currentEnd, currentS = ViewBag.currentS, currentE = ViewBag.currentE, currentStatus = ViewBag.Status }))
+<p class="pageof">page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount</p>

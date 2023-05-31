@@ -1,0 +1,205 @@
+﻿
+@{
+    ViewBag.Title = "Bảo hành";
+    List<BHDT_OledPro.Models.Province> lprovince = (List<BHDT_OledPro.Models.Province>)TempData["province"];
+}
+
+@section scripts{
+    <script>
+        function GetCustomer() {
+            var phone = $("#phone").val();
+            $.ajax({
+                url: '/Active/GetCustomer',
+                type: 'POST',
+                datatype: 'application/json',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    phone: phone
+                }),
+                success: function (result) {
+                    var ob = $.parseJSON(result);
+                    if (ob.Name.length > 3) {
+                        $("#name").val(ob.Name);
+                        $("#address").val(ob.Address);
+                        $('#province').append(new Option(ob.City, ob.City, true, true));
+                        $('#district').append(new Option(ob.District, ob.District, true, true));
+                        $("#email").val(ob.Email);
+                    }
+                },
+                error: function () {
+                    $("#name").val("");
+                    $("#address").val("");
+                    $("#email").val("");
+                    $('#province').append(new Option("Nhập Tỉnh thành", "", true, true));
+                    $('#district').append(new Option("Nhập Quận huyện", "", true, true));
+                },
+            });
+        }
+        function GetCity() {
+            $("#district").html("");
+            $("#district").append
+                ($('<option></option>').val("").html("Nhập Quận huyện"))
+            var name = $("#province").val();
+            $.ajax
+                ({
+                    url: '/Warranti/GetCity',
+                    type: 'POST',
+                    datatype: 'application/json',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        name: name
+                    }),
+                    success: function (result) {
+                        $.each($.parseJSON(result), function (i, city) {
+                            $("#district").append
+                                ($('<option></option>').val(city).html(city))
+                        })
+                    },
+                    error: function () {
+                        alert("Hệ thống xảy ra lỗi.")
+                    },
+                });
+        }
+        var find = {
+            init: function () {
+                find.registerEvent();
+            },
+            registerEvent: function () {
+                $('#send').off('click').on('click', function () {
+                    $("#txt-info").css("display", "none");
+
+                    var serial = $('#serial').val();
+                    var name = $('#name').val();
+                    var phone = $('#phone').val();
+                    var province = $('#province').val();
+                    var district = $('#district').val();
+                    var address = $('#address').val();
+                    var note = $('#note').val();
+                    var email = $('#email').val();
+                    if (serial.length < 2) {
+                        $("#txt-info").css("display", "block");
+                        $("#txt-info").text("Số serial không đúng.");
+                    }
+                    else if (name.length == 0 || phone.length == 0 || province.length == 0 || district == 0) {
+                        $("#txt-info").css("display", "block");
+                        $("#txt-info").text("Thông tin kích hoạt không đủ");
+                    }
+                    else {
+                        $.ajax({
+                            url: '/Warranti/Send',
+                            type: 'POST',
+                            dataType: 'json',
+                            data: {
+                                serial: serial,
+                                name: name,
+                                phone: phone,
+                                province: province,
+                                district: district,
+                                address: address,
+                                note: note,
+                                email: email
+                            },
+                            success: function (ress) {
+                                var ob = $.parseJSON(ress);
+                                $("#txt-info").css("display", "block");
+                                $("#txt-info").text(ob.message);
+
+                                find.resetForm();
+                            }
+                        });
+                    }
+                });
+            },
+            resetForm: function () {
+                $('#serial').val("");
+                $('#name').val("");
+                $('#phone').val("");
+                $('#province').val("");
+                $('#district').val("");
+                $('#address').val("");
+                $('#note').val("");
+                $('#email').val("");
+            }
+        }
+        find.init();
+    </script>
+}
+<style>
+    table td {
+        border: none !important;
+    }
+    #txt-info{
+        margin-top:5px !important;
+    }
+</style>
+<h2>Yêu cầu bảo hành</h2>
+<hr />
+<div class="row">
+    <div class="panel-body">
+        <div class="table-responsive">
+            <form action="~/Admin/Brandname/Send" method="post">
+                <table class="table">
+                    <tr>
+                        <td>Số serial:</td>
+                        <td>
+                            <input name="serial" type="text" id="serial" class="form-control" required placeholder="Nhập số serial" />
+                        </td>
+
+                        <td>Tỉnh thành:</td>
+                        <td>
+                            <select name="province" onchange="GetCity()" id="province" class="form-control HeightCBB" required placeholder="Nhập tỉnh thành">
+                                <option value="">Nhập Tỉnh thành</option>
+                                @foreach (var item in lprovince)
+                                {
+                                    <option value="@item.Name">@item.Name</option>
+                                }
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Số điện thoại:</td>
+                        <td>
+                            <input onblur="GetCustomer(this)" name="phone" type="number" id="phone" class="form-control" required placeholder="Nhập số điện thoại" />
+                        </td>
+
+                        <td>Quận huyện:</td>
+                        <td>
+                            <select name="district" id="district" class="form-control HeightCBB" required placeholder="Nhập Quận huyện">
+                                <option value="">Nhập Quận huyện</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tên khách hàng:</td>
+                        <td>
+                            <input name="name" type="text" id="name" required class="form-control" placeholder="Nhập họ tên" />
+                        </td>
+
+                        <td>Địa chỉ:</td>
+                        <td>
+                            <input name="address" type="text" id="address" class="form-control" placeholder="Nhập địa chỉ" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mô tả:</td>
+                        <td>
+                            <input name="note" type="text" id="note" class="form-control" placeholder="Nhập ghi chú" />
+                        </td>
+
+                        <td>Email:</td>
+                        <td>
+                            <input name="email" type="email" id="email" class="form-control" placeholder="Nhập email" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="3">
+                            <input type="button" name="send" value="Đăng Ký / Register" id="send" class="btn btn-success submit" />
+                            <p id="txt-info" class="w3-animate-left alert alert-danger" style="display:none;"></p>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>

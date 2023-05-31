@@ -1,0 +1,29 @@
+﻿@using BHDT_OledPro.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAccount.cshtml";
+}
+@using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <fieldset>
+        <div class="form-group">
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+        </div>
+        <div class="checkbox">
+            <label>
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe)
+            </label>
+        </div>
+        <!-- Change this to a button or input when using this as a form -->
+        <input type="submit" value="Log in" class="btn btn-lg btn-success btn-block" />
+    </fieldset>
+}
